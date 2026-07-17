@@ -96,6 +96,14 @@
   @media(max-width:720px){.statband{grid-template-columns:repeat(2,1fr)}}
   .stat-compact{border:1px solid var(--border)}
   .stat-compact .s{padding:22px 26px}
+  .statrow{display:grid;grid-template-columns:repeat(5,1fr);gap:26px;margin-top:34px}
+  .statrow .s{position:relative;padding-top:10px}
+  .statrow .s::before{content:"";position:absolute;top:-8px;left:-10px;width:44px;height:44px;border-radius:50% 50% 50% 6px;background:var(--blob);opacity:.4;filter:blur(2px);z-index:0}
+  .statrow .n{position:relative;z-index:1;font-size:2.3rem;font-weight:800;color:var(--white);line-height:1;letter-spacing:-.02em;display:inline-flex;align-items:baseline}
+  .statrow .n .u{font-size:1rem;font-weight:700;color:var(--mint-300);margin-left:2px}
+  .statrow .l{position:relative;z-index:1;font-size:.86rem;color:var(--mint-300);margin-top:12px;max-width:150px}
+  @media(max-width:860px){.statrow{grid-template-columns:repeat(3,1fr)}}
+  @media(max-width:560px){.statrow{grid-template-columns:repeat(2,1fr)}}
   .openitem{margin-top:22px;font-size:.82rem;color:var(--mint-300);border-left:2px solid var(--tang);padding:6px 0 6px 16px;max-width:820px;font-style:italic}
 
   /* ---------- cards ---------- */
@@ -707,12 +715,13 @@
   <div class="wrap">
     <div class="sec-head"><span class="sec-kicker">Outcomes</span></div>
     <h2 class="sec-title">Where it lands</h2>
-    <div class="statband" style="margin-top:34px;grid-template-columns:repeat(3,1fr)">
-      <div class="s"><div class="n">100%</div><div class="l">Placement</div></div>
-      <div class="s"><div class="n">40%</div><div class="l">Big-brand placements at high-growth startups</div></div>
-      <div class="s"><div class="n">4.5+</div><div class="l">Career prep NPS</div></div>
+    <div class="statrow">
+      <div class="s" style="--blob:#8A4A3A"><div class="n">26<span class="u">L</span></div><div class="l">Average CTC (in Lakhs)</div></div>
+      <div class="s" style="--blob:var(--green)"><div class="n">58<span class="u">%</span></div><div class="l">In founder-facing roles</div></div>
+      <div class="s" style="--blob:#2F6F68"><div class="n">2.8<span class="u">x</span></div><div class="l">Average CTC Jump</div></div>
+      <div class="s" style="--blob:var(--forest-deep)"><div class="n">500<span class="u">+</span></div><div class="l">Partner startups</div></div>
+      <div class="s" style="--blob:#6B2F2F"><div class="n">36.5<span class="u">L</span></div><div class="l">Top 25% students avg CTC</div></div>
     </div>
-    <p class="lead-in" style="margin-top:22px;font-style:italic">Competitive comp across internships and full-time offers.</p>
 
     <div class="sub-label">Where grads landed</div>
     <div class="logowall">
