@@ -63,9 +63,6 @@
   .hero h2{font-size:clamp(1.15rem,2.2vw,1.5rem);font-weight:600;color:var(--green);margin:0 0 20px;letter-spacing:-.01em}
   .hero .lede{color:var(--mint-300);font-size:1.08rem;max-width:520px;margin-bottom:28px}
   .hero-actions{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:34px}
-  .metrics{display:grid;grid-template-columns:repeat(3,auto);gap:22px 30px;justify-content:start}
-  .metrics .m .n{font-size:1.5rem;font-weight:800;color:var(--green);line-height:1;letter-spacing:-.02em}
-  .metrics .m .l{font-size:.78rem;color:var(--mint-300);margin-top:5px;max-width:150px}
   .hero-visual{position:relative;min-height:360px;display:flex;align-items:center;justify-content:center}
   .concentric{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;pointer-events:none}
   .concentric svg{width:300px;height:300px;opacity:.85}
@@ -73,7 +70,7 @@
     background-image:repeating-linear-gradient(45deg,transparent,transparent 9px,rgba(228,243,231,.03) 9px,rgba(228,243,231,.03) 18px)}
   .media-ph .tag{align-self:flex-start;font-size:.62rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--green);background:rgba(110,209,144,.14);border:1px solid rgba(110,209,144,.3);padding:5px 11px;border-radius:999px;margin-bottom:auto}
   .media-ph p{font-size:.84rem;color:var(--mint-300)}
-  @media(max-width:860px){.hero-grid{grid-template-columns:1fr;padding:52px 0 44px}.hero-visual{order:-1;min-height:220px}.metrics{grid-template-columns:repeat(2,auto)}}
+  @media(max-width:860px){.hero-grid{grid-template-columns:1fr;padding:52px 0 44px}.hero-visual{order:-1;min-height:220px}}
 
   /* ---------- sections ---------- */
   section{padding:76px 0;border-bottom:1px solid var(--border)}
@@ -360,11 +357,6 @@
           <button class="btn btn-cta">Apply Now <span class="arw">&rarr;</span></button>
           <button class="btn btn-ghost">Explore the PG Program</button>
         </div>
-        <div class="metrics">
-          <div class="m"><div class="n">250+</div><div class="l">hours of structured prep</div></div>
-          <div class="m"><div class="n">1,100+</div><div class="l">mock interviews</div></div>
-          <div class="m"><div class="n">50+</div><div class="l">domain-specific mentors</div></div>
-        </div>
       </div>
       <div class="hero-visual">
         <div class="concentric" aria-hidden="true">
@@ -386,13 +378,11 @@
 <!-- ============ STAT STRIP ============ -->
 <section class="deep" id="stats">
   <div class="wrap">
-    <div class="statband">
-      <div class="s"><div class="n">100%</div><div class="l">Placement rate</div></div>
-      <div class="s"><div class="n">40%</div><div class="l">Big-brand placements at high-growth startups</div></div>
-      <div class="s"><div class="n">4.5+</div><div class="l">Career prep NPS</div></div>
-      <div class="s"><div class="n">XX%</div><div class="l">Application to offer acceptance</div></div>
+    <div class="statband" style="grid-template-columns:repeat(3,1fr)">
+      <div class="s"><div class="n">250+</div><div class="l">hours of structured prep</div></div>
+      <div class="s"><div class="n">1,100+</div><div class="l">mock interviews</div></div>
+      <div class="s"><div class="n">50+</div><div class="l">domain-specific mentors</div></div>
     </div>
-    <p class="openitem">[Open item: Application-to-offer acceptance %, Interview-to-offer acceptance %, PPO conversion rate, and Profile shortlisting % are marked XX% in the source document. Replace with verified figures before publishing.]</p>
   </div>
 </section>
 
